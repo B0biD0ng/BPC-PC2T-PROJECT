@@ -4,6 +4,10 @@
 ![Language](https://img.shields.io/badge/language-%20Java-orange)
 ![Database](https://img.shields.io/badge/database-lightgrey)
 
+## 🎫 Contributors
+* **Róbert Balco**  BackEnd/FrontEnd  **ID:** 270915
+* **Marek Čechál**  BackEnd/FrontEnd  **ID:** 270777
+
 A sophisticated employee management system designed for a technology firm. This application manages personnel, tracks complex collaborations, and provides specialized analytical tools for different employee roles.
 
 ---
