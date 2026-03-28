@@ -1,8 +1,8 @@
 # 👥 Employee Database System (OOP Project)
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Language](https://img.shields.io/badge/language-C%23%20%2F%20Java-blue)
-![Database](https://img.shields.io/badge/database-SQL-lightgrey)
+![Language](https://img.shields.io/badge/language-%20Java-orange)
+![Database](https://img.shields.io/badge/database-lightgrey)
 
 A sophisticated employee management system designed for a technology firm. This application manages personnel, tracks complex collaborations, and provides specialized analytical tools for different employee roles.
 
