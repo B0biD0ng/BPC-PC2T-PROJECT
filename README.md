@@ -13,17 +13,9 @@ A sophisticated employee management system designed for a technology firm. This 
 ---
 
 ## 📈 Project Progress (Roadmap)
-
-- [x] **Initial Project Setup** (Base OOP structure)
-- [x] **Employee Models** (Abstract class & Inheritance)
-- [ ] **Specialized Roles Logic** (Data Analysts & Security Specialists)
-- [ ] **Collaboration Engine** (Dynamic data structures implementation)
-- [ ] **Management Logic** (Add/Remove/Search employees)
-- [ ] **Statistics & Algorithms** (Risk score & connection analysis)
-- [ ] **File Persistence** (Save/Load from local files)
-- [ ] **SQL Database Integration** (Backup & Startup load)
-- [ ] **Final Testing & Documentation**
-
+- MAin files
+- NO SQL
+- no comentaris
 ---
 
 ## ✨ Key Features
