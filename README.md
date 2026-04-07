@@ -16,6 +16,8 @@ A sophisticated employee management system designed for a technology firm. This 
 - MAin files
 - NO SQL
 - no comentaris
+- Load, Save for databse
+  
 ---
 
 ## ✨ Key Features
