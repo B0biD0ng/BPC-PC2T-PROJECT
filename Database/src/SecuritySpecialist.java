@@ -11,16 +11,6 @@ public class SecuritySpecialist extends Employee {
         return "Bezpecnostni specialista";
     }
 
-    /**
-     * Dovednost: vypočítá rizikové skóre.
-     *
-     * Algoritmus:
-     *   - Kazda spoluprace ma vahu: dobra=1, prumerna=2, spatna=3
-     *   - Prumerna vaha = soucet vah / pocet spolupracovniku
-     *   - Rizikové skóre = průměrná váha * log10(počet + 1) * 10
-     *   - Výsledek zaokrouhlíme na 2 desetinná místa
-     *   - Čím vyšší skóre, tím rizikovější spolupráce
-     */
     private double calculateRiskScore() {
         if (cooperations.isEmpty()) return 0.0;
 

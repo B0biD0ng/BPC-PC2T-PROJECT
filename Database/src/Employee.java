@@ -8,7 +8,7 @@ public abstract class Employee implements Serializable {
     protected String firstName;
     protected String lastName;
     protected int birthYear;
-    protected List<Cooperation> cooperations; // dynamická datová štruktúra
+    protected List<Cooperation> cooperations; 
 
     public Employee(int id, String firstName, String lastName, int birthYear) {
         this.id = id;
@@ -18,7 +18,7 @@ public abstract class Employee implements Serializable {
         this.cooperations = new ArrayList<>();
     }
 
-    // --- Gettery ---
+  
     public int getId() { return id; }
     public String getFirstName() { return firstName; }
     public String getLastName() { return lastName; }
@@ -29,7 +29,7 @@ public abstract class Employee implements Serializable {
     public abstract String getGroupName();
     public abstract String useSkill(EmployeeDatabase db);
 
-    // --- Spolupráce ---
+    
     public void addCooperation(int colleagueId, CooperationLevel level) {
         for (Cooperation c : cooperations) {
             if (c.getColleagueId() == colleagueId) {
@@ -65,7 +65,7 @@ public abstract class Employee implements Serializable {
                 .orElse(null);
     }
 
-    // --- CSV Serializácia ---
+    
     public String toCsv() {
         String type = (this instanceof DataAnalyst) ? "1" : "2";
         StringBuilder sb = new StringBuilder();

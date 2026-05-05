@@ -6,7 +6,7 @@ public class Main {
     private static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Nacteni databaze ze souboru pri spusteni
+        
         try {
             if (FileManager.loadAll(db)) {
                 System.out.println("Data nactena z databaze.");
@@ -38,7 +38,7 @@ public class Main {
             }
         }
 
-        // Ulozeni databaze pri ukonceni
+        
         try {
             FileManager.saveAll(db);
         } catch (Exception e) {
@@ -47,7 +47,7 @@ public class Main {
         System.out.println("Program ukoncen.");
     }
 
-    // --- Menu ---
+    
 
     private static void printMenu() {
         System.out.println("""
@@ -67,7 +67,7 @@ public class Main {
             Volba: """);
     }
 
-    // --- Implementace možností ---
+   
 
     private static void addEmployee() {
         System.out.println("Skupina: 1) Datovy analytik  2) Bezpecnostni specialista");
@@ -184,7 +184,7 @@ public class Main {
         }
     }
 
-    // --- Pomocné ---
+   
 
     private static int readInt() {
         try {

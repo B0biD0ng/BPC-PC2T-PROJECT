@@ -2,15 +2,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class EmployeeDatabase {
-    private final Map<Integer, Employee> employees; // dynamická datová štruktúra
-    private int nextId;
+    private final Map<Integer, Employee> employees; 
 
     public EmployeeDatabase() {
         this.employees = new LinkedHashMap<>();
         this.nextId = 1;
     }
 
-    // --- Přidání / odebrání zaměstnance ---
+   
 
     public Employee addEmployee(String group, String firstName, String lastName, int birthYear) {
         int id = nextId++;
@@ -27,14 +26,14 @@ public class EmployeeDatabase {
     public boolean removeEmployee(int id) {
         if (!employees.containsKey(id)) return false;
         employees.remove(id);
-        // Odstraní všechny vazby na tohoto zaměstnance
+        
         for (Employee emp : employees.values()) {
             emp.removeCooperation(id);
         }
         return true;
     }
 
-    // --- Vyhledání ---
+    
 
     public Employee findById(int id) {
         return employees.get(id);
@@ -44,7 +43,7 @@ public class EmployeeDatabase {
         return employees.values();
     }
 
-    // --- Spolupráce ---
+    
 
     public String addCooperation(int empId, int colleagueId, CooperationLevel level) {
         Employee emp = employees.get(empId);
@@ -56,7 +55,7 @@ public class EmployeeDatabase {
         return "Spoluprace pridana: " + emp.getFullName() + " -> " + colleague.getFullName() + " [" + level + "]";
     }
 
-    // --- Abecední výpis podle skupin ---
+   
 
     public void printByGroups() {
         List<Employee> analysts = employees.values().stream()
@@ -78,7 +77,7 @@ public class EmployeeDatabase {
         else specialists.forEach(e -> System.out.println("  " + e));
     }
 
-    // --- Statistiky ---
+   
 
     public void printStats() {
         if (employees.isEmpty()) {
@@ -86,7 +85,7 @@ public class EmployeeDatabase {
             return;
         }
 
-        // Převažující kvalita spolupráce
+        
         Map<CooperationLevel, Integer> total = new EnumMap<>(CooperationLevel.class);
         for (CooperationLevel lvl : CooperationLevel.values()) total.put(lvl, 0);
         for (Employee emp : employees.values()) {
@@ -98,7 +97,7 @@ public class EmployeeDatabase {
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey).orElse(null);
 
-        // Zaměstnanec s nejvíce vazbami
+        
         Employee mostConnected = employees.values().stream()
                 .max(Comparator.comparingInt(e -> e.getCooperations().size()))
                 .orElse(null);
@@ -117,7 +116,7 @@ public class EmployeeDatabase {
         }
     }
 
-    // --- Počty ve skupinách ---
+    
 
     public void printGroupCounts() {
         long analysts = employees.values().stream().filter(e -> e instanceof DataAnalyst).count();
@@ -127,7 +126,7 @@ public class EmployeeDatabase {
         System.out.println("Bezpecnostni specialisti: " + specialists);
     }
 
-    // --- Správa ID ---
+   
 
     public void setNextId(int nextId) {
         this.nextId = nextId;

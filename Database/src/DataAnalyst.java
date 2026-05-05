@@ -11,9 +11,7 @@ public class DataAnalyst extends Employee {
         return "Datovy analytik";
     }
 
-    /**
-     * Dovednost: najde spolupracovníka, se kterým má nejvíce společných kolegů.
-     */
+    
     @Override
     public String useSkill(EmployeeDatabase db) {
         Set<Integer> myColleagues = getColleagueIds();
